@@ -25,21 +25,16 @@ const builder = new StringBuilder('.');
 
 
 builder.append('^');
-
 console.log(builder.value); // '.^'
 
-builder.prepend('^');
 
+builder.prepend('^');
 console.log(builder.value); // '^.^'
+
 
 builder.pad('=');
 console.log(builder.value); // '=^.^='
 
-console.log(bui);
-builder.append('^');
-builder.prepend('^');
 
 // builder.append('^').prepend('^').pad('=');
-
-
 // console.log(builder.value);

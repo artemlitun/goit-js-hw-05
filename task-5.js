@@ -1,22 +1,22 @@
 class Car {
-    constructor(obj) {
-      this.maxSpeed = obj.maxSpeed;
-      this.speed = 0;
-      this.isOn = false;
-      this.distance = 0;
-      this.price = obj.price;
+  constructor({ maxSpeed, price }, speed = 0, isOn = false, distance = 0) {
+      this.maxSpeed = maxSpeed;
+      this.speed = speed;
+      this.isOn = isOn;
+      this.distance = distance;
+      this.price = price;
     }
   
     static getSpecs(car) {
       console.log(car);
     }
   
-    get price() {
-      return this._price;
+    get newPrice() {
+      return this.price;
     }
   
-    set price(car) {
-      this._price = car;
+    set newPrice(value) {
+      this.price = value;
     }
   
     turnOn() {
@@ -67,6 +67,4 @@ class Car {
 console.log(mustang.price); // 2000
   
 mustang.price = 4000;
-  
-
-  console.log(mustang.price); // 4000
+console.log(mustang.price); // 4000
