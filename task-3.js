@@ -11,9 +11,9 @@ class Storage {
     removeItem(item) {
 
         if (this.items.includes(item)) {
-            this.items.splice(this.items.indexOf(items))
+            this.items.splice(this.items.indexOf(item), 1 )
             return this.items;
-        };
+        }; 
     }
 }
   const storage = new Storage([
@@ -30,5 +30,7 @@ const items = storage.getItems();
   storage.addItem('Дроид');
   console.table(storage.items); 
   
-  storage.removeItem('Пролонгер');
+storage.removeItem('Пролонгер');
+storage.removeItem('Железные жупи');
+  
   console.table(storage.items);
